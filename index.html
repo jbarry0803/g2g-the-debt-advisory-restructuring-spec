@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- htmlaunch:enhanced:v2 -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2264%22%20height%3D%2264%22%20viewBox%3D%220%200%2064%2064%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22hsl(77%2C72%25%2C58%25)%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22hsl(107%2C72%25%2C44%25)%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22url(%23g)%22%2F%3E%3Ctext%20x%3D%2232%22%20y%3D%2246%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2C-apple-system%2CSegoe%20UI%2Csans-serif%22%20font-size%3D%2238%22%20font-weight%3D%22800%22%20fill%3D%22%23ffffff%22%3EG%3C%2Ftext%3E%3C%2Fsvg%3E">
+<meta name="theme-color" content="#7b1471">
+<meta name="description" content="G2G — The Debt Advisory &amp; Restructuring Special | deployed with HTMLaunch">
+<link rel="canonical" href="https://jbarry0803.github.io/g2g-the-debt-advisory-restructuring-spec/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="G2G — The Debt Advisory &amp; Restructuring Special">
+<meta property="og:title" content="G2G — The Debt Advisory &amp; Restructuring Special">
+<meta property="og:description" content="G2G — The Debt Advisory &amp; Restructuring Special | deployed with HTMLaunch">
+<meta property="og:url" content="https://jbarry0803.github.io/g2g-the-debt-advisory-restructuring-spec/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fjbarry0803.github.io%2Fg2g-the-debt-advisory-restructuring-spec%2F?w=1200&h=630">
+<meta property="og:image:alt" content="G2G — The Debt Advisory &amp; Restructuring Special">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="G2G — The Debt Advisory &amp; Restructuring Special">
+<meta name="twitter:description" content="G2G — The Debt Advisory &amp; Restructuring Special | deployed with HTMLaunch">
+<meta name="twitter:image" content="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fjbarry0803.github.io%2Fg2g-the-debt-advisory-restructuring-spec%2F?w=1200&h=630">
+<meta name="twitter:image:alt" content="G2G — The Debt Advisory &amp; Restructuring Special">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>G2G — The Debt Advisory & Restructuring Special</title>
+<style>
+  /* ===========================================================
+     G2G — Debt Advisory & Restructuring Special
+     Visual language matched to the Fintech Special.
+     =========================================================== */
+
+  :root {
+    --navy:        #1F3A5F;
+    --navy-deep:   #15294A;
+    --navy-light:  #2C4F7C;
+    --rule:        #1F3A5F;
+    --tint:        #EBF1F7;
+    --tint-soft:   #F4F7FB;
+    --border:      #C9D2DD;
+    --text:        #1F1F1F;
+    --muted:       #5C6470;
+    --tip-bg:      #FBF6E9;
+    --tip-border:  #C9A646;
+    --warn-bg:     #FAEDED;
+    --warn-border: #B23A3A;
+  }
+
+  @page {
+    size: A4;
+    margin: 22mm 20mm;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #F5F5F2;
+    color: var(--text);
+    font-family: "Calibri", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 11.5pt;
+    line-height: 1.45;
+  }
+
+  .sheet {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 18px auto;
+    padding: 22mm 20mm;
+    background: #FFFFFF;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+    position: relative;
+    page-break-after: always;
+  }
+  .sheet:last-child { page-break-after: auto; }
+
+  /* Running header on every page */
+  .running-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1.5px solid var(--rule);
+    padding-bottom: 6px;
+    margin-bottom: 18px;
+    font-size: 10pt;
+    color: var(--navy);
+  }
+  .running-head .left  { font-style: italic; }
+  .running-head .right { font-style: italic; }
+
+  /* Footer */
+  .running-foot {
+    position: absolute;
+    bottom: 12mm;
+    left: 20mm;
+    right: 20mm;
+    border-top: 1px solid var(--border);
+    padding-top: 6px;
+    text-align: center;
+    font-size: 9.5pt;
+    color: var(--muted);
+  }
+  .running-foot .pg { color: var(--text); }
+
+  /* Cover page */
+  .cover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 70mm;
+  }
+  .cover .eyebrow {
+    color: var(--navy);
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    font-size: 13pt;
+    margin-bottom: 14px;
+  }
+  .cover h1 {
+    color: var(--navy-deep);
+    font-size: 40pt;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin: 0 0 18px;
+    line-height: 1.05;
+  }
+  .cover .tag {
+    color: var(--text);
+    font-style: italic;
+    font-size: 13pt;
+    margin-bottom: 26px;
+  }
+  .cover .rule {
+    width: 78%;
+    border-top: 1.2px solid var(--rule);
+    margin: 8px auto 14px;
+  }
+  .cover .topics {
+    color: var(--text);
+    font-size: 11.5pt;
+    letter-spacing: 0.3px;
+    padding: 8px 0;
+  }
+  .cover .topics span { margin: 0 6px; color: var(--navy); }
+  .cover .topics .sep { color: var(--border); }
+  .cover .adapted {
+    margin-top: 80mm;
+    font-style: italic;
+    font-size: 11pt;
+    color: var(--text);
+  }
+  .cover .dedication {
+    margin-top: 26mm;
+    font-size: 11pt;
+    color: var(--navy);
+    font-style: italic;
+  }
+  .cover .dedication strong { color: var(--navy-deep); font-style: normal; font-weight: 700; }
+
+  /* Personal note page */
+  .note {
+    border-left: 3px solid var(--navy);
+    padding: 10px 18px;
+    background: var(--tint-soft);
+    margin-bottom: 22px;
+    font-size: 11.5pt;
+  }
+  .note .salutation { color: var(--navy-deep); font-weight: 700; margin-bottom: 8px; }
+  .note .signoff { margin-top: 14px; font-style: italic; color: var(--navy); }
+
+  /* Headings */
+  h1.section-title {
+    color: var(--navy-deep);
+    font-size: 22pt;
+    font-weight: 800;
+    margin: 4px 0 10px;
+    letter-spacing: -0.3px;
+  }
+  h2.subsection {
+    color: var(--navy-deep);
+    font-size: 15.5pt;
+    font-weight: 700;
+    margin: 22px 0 10px;
+  }
+  h3.minor {
+    color: var(--navy);
+    font-size: 12.5pt;
+    font-weight: 700;
+    margin: 14px 0 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+  }
+
+  p { margin: 0 0 9pt; }
+  p strong { color: var(--navy-deep); }
+
+  /* Lead intro paragraph */
+  .lead {
+    font-size: 11.5pt;
+    color: var(--text);
+  }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0 16px;
+    font-size: 10.5pt;
+  }
+  table th {
+    background: var(--navy);
+    color: #FFFFFF;
+    text-align: left;
+    padding: 8px 10px;
+    border: 1px solid var(--navy);
+    font-weight: 700;
+    vertical-align: top;
+  }
+  table td {
+    border: 1px solid var(--border);
+    padding: 7px 10px;
+    vertical-align: top;
+    background: #FFFFFF;
+  }
+  table tr:nth-child(odd) td { background: var(--tint); }
+  table td strong { color: var(--navy-deep); }
+
+  /* Compact metric table */
+  table.metrics td:first-child,
+  table.metrics th:first-child { width: 22%; }
+  table.metrics td:nth-child(2),
+  table.metrics th:nth-child(2) { width: 28%; }
+
+  /* Callout boxes */
+  .tip {
+    background: var(--tip-bg);
+    border-left: 4px solid var(--tip-border);
+    padding: 10px 14px;
+    margin: 14px 0 18px;
+    font-size: 10.8pt;
+  }
+  .tip .label {
+    font-weight: 700;
+    color: #6E5410;
+    margin-right: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 9.5pt;
+  }
+
+  .warn {
+    background: var(--warn-bg);
+    border-left: 4px solid var(--warn-border);
+    padding: 10px 14px;
+    margin: 14px 0 18px;
+    font-size: 10.8pt;
+  }
+  .warn .label {
+    font-weight: 700;
+    color: var(--warn-border);
+    margin-right: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 9.5pt;
+  }
+
+  /* Bullet lists - keep tight */
+  ul.tight {
+    margin: 6px 0 12px 18px;
+    padding: 0;
+  }
+  ul.tight li { margin: 0 0 5px; }
+
+  /* Two-column layout for the situation cards */
+  .situation-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 14px 0;
+  }
+  .situation {
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--navy);
+    padding: 12px 14px;
+    background: #FFFFFF;
+  }
+  .situation h4 {
+    margin: 0 0 6px;
+    color: var(--navy-deep);
+    font-size: 12pt;
+    font-weight: 700;
+  }
+  .situation p { font-size: 10.5pt; margin: 0 0 5px; }
+  .situation .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 8px;
+  }
+  .situation .tag {
+    background: var(--tint);
+    color: var(--navy-deep);
+    border: 1px solid var(--border);
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 9pt;
+  }
+
+  /* Ladder visual for stressed -> distressed -> bankrupt */
+  .ladder {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+    margin: 14px 0 18px;
+    border: 1px solid var(--border);
+  }
+  .ladder .rung {
+    padding: 12px 14px;
+    border-right: 1px solid var(--border);
+    background: #FFFFFF;
+  }
+  .ladder .rung:last-child { border-right: none; }
+  .ladder .rung h4 {
+    margin: 0 0 4px;
+    color: #FFFFFF;
+    background: var(--navy);
+    padding: 6px 10px;
+    margin: -12px -14px 8px;
+    font-size: 11pt;
+    letter-spacing: 0.3px;
+  }
+  .ladder .rung.stressed h4   { background: #4B7CB0; }
+  .ladder .rung.distressed h4 { background: #B28538; }
+  .ladder .rung.bankrupt h4   { background: #8E2D2D; }
+  .ladder .rung p { font-size: 10.3pt; margin: 0 0 4px; }
+  .ladder .rung .meta {
+    font-size: 9.5pt;
+    color: var(--muted);
+    font-style: italic;
+    margin-top: 6px;
+  }
+
+  /* Formula box */
+  .formula {
+    background: var(--tint-soft);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--navy);
+    padding: 8px 12px;
+    margin: 6px 0 10px;
+    font-family: "Cambria", "Georgia", serif;
+    font-style: italic;
+    font-size: 11pt;
+    color: var(--navy-deep);
+  }
+
+  /* Toolbox cards for Section 2 tools */
+  .tools {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 12px 0 16px;
+  }
+  .tool {
+    border: 1px solid var(--border);
+    padding: 10px 12px;
+    background: var(--tint-soft);
+  }
+  .tool h4 {
+    margin: 0 0 4px;
+    color: var(--navy-deep);
+    font-size: 11.2pt;
+  }
+  .tool p { font-size: 10.3pt; margin: 0; }
+
+  /* Triggers strip */
+  .triggers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin: 10px 0 16px;
+  }
+  .trigger {
+    background: #FFFFFF;
+    border: 1px solid var(--border);
+    border-top: 3px solid #B23A3A;
+    padding: 10px 12px;
+  }
+  .trigger h4 {
+    margin: 0 0 4px;
+    font-size: 10.8pt;
+    color: var(--navy-deep);
+  }
+  .trigger p { font-size: 10pt; margin: 0; color: var(--text); }
+
+  /* EV waterfall mini-diagram */
+  .waterfall {
+    border: 1px solid var(--border);
+    background: #FFFFFF;
+    margin: 12px 0 18px;
+  }
+  .waterfall .row {
+    display: grid;
+    grid-template-columns: 36% 1fr 12%;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    padding: 8px 12px;
+    font-size: 10.5pt;
+  }
+  .waterfall .row:last-child { border-bottom: none; background: var(--tint); font-weight: 700; }
+  .waterfall .row .label { color: var(--navy-deep); font-weight: 600; }
+  .waterfall .row .bar {
+    height: 14px;
+    background: linear-gradient(90deg, var(--navy) 0%, var(--navy-light) 100%);
+    border-radius: 2px;
+    margin: 0 10px;
+  }
+  .waterfall .row .val { text-align: right; color: var(--navy-deep); }
+
+  /* Footer note */
+  .footer-note {
+    margin-top: 16px;
+    font-size: 9.5pt;
+    color: var(--muted);
+    font-style: italic;
+    border-top: 1px dashed var(--border);
+    padding-top: 6px;
+  }
+
+  /* Print niceties */
+  @media print {
+    body { background: #FFF; }
+    .sheet { box-shadow: none; margin: 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- =====================================================
+     COVER
+     ===================================================== -->
+<section class="sheet cover">
+  <div class="eyebrow">FROM GREENHORN TO GOLD(WO)MAN</div>
+  <h1>THE DEBT ADVISORY<br>&amp; RESTRUCTURING SPECIAL</h1>
+  <div class="tag">A DA&amp;R Playbook for Investment Banking Interviews</div>
+  <div class="rule"></div>
+  <div class="topics">
+    <span>Financial Stress</span><span class="sep">|</span>
+    <span>Refinancing</span><span class="sep">|</span>
+    <span>Liquidity</span><span class="sep">|</span>
+    <span>Recap</span><span class="sep">|</span>
+    <span>Restructuring</span><span class="sep">|</span>
+    <span>Credit Markets</span>
+  </div>
+  <div class="adapted">Adapted from G2G Vol. 14 — Advanced TMT II</div>
+  <div class="dedication">
+    Prepared for <strong>Benjamin Kuan</strong> — go get the offer.
+  </div>
+</section>
+
+<!-- =====================================================
+     PERSONAL NOTE + TABLE OF CONTENTS
+     ===================================================== -->
+<section class="sheet">
+  <div class="running-head">
+    <div class="left">G2G — The DA&amp;R Special</div>
+    <div class="right">Interview Preparation Guide</div>
+  </div>
+
+  <div class="note">
+    <div class="salutation">Ben,</div>
+    <p>Pulled this together because you mentioned the DA&amp;R desks are next on your list. The structure mirrors the Fintech Special you already have, so the muscle memory should carry over. I&rsquo;ve kept it tight and in the order we discussed: situations first, then the basics so you can talk fluently about stressed-vs-distressed, then valuation (this is where most candidates fumble), the credit metrics you&rsquo;ll be drilled on, the financing menu, and finally the macro backdrop you should be able to riff on for a minute or two.</p>
+    <p>If the interviewer goes deep on liability management exercises, recovery analysis, or fulcrum-security thinking, you&rsquo;ll be in good shape. Read the &ldquo;Interview Tip&rdquo; boxes twice.</p>
+    <div class="signoff">— Talk soon, and good luck.</div>
+  </div>
+
+  <h2 class="subsection">Contents</h2>
+  <table>
+    <tr><th style="width:8%">§</th><th>Section</th><th style="width:12%">Page</th></tr>
+    <tr><td>1</td><td>Key Situations Covered by DA&amp;R</td><td>3</td></tr>
+    <tr><td>2</td><td>Restructuring Basics</td><td>5</td></tr>
+    <tr><td>3</td><td>Valuation Approach in DA&amp;R</td><td>7</td></tr>
+    <tr><td>4</td><td>Key Credit Metrics</td><td>9</td></tr>
+    <tr><td>5</td><td>Financing Options</td><td>11</td></tr>
+    <tr><td>6</td><td>Market Drivers &amp; Risks</td><td>13</td></tr>
+  </table>
+
+  <p class="lead" style="margin-top:18px;">Debt Advisory &amp; Restructuring (DA&amp;R) sits at the intersection of capital markets, credit analysis, and corporate finance. Unlike M&amp;A — where the deliverable is a transaction — DA&amp;R mandates start with a problem (a maturity, a covenant, a missed payment, a deteriorating credit) and end with a solution that may or may not involve a financing transaction. The advisor&rsquo;s job is to assess the company&rsquo;s capital structure against its cash flow profile, identify the realistic universe of solutions, and execute the chosen path with the existing creditor group. This guide covers the analytical and commercial frameworks that any DA&amp;R interview will test.</p>
+
+  <div class="running-foot"><span class="pg">Page 2</span></div>
+</section>
+
+<!-- =====================================================
+     SECTION 1 — KEY SITUATIONS
+     ===================================================== -->
+<section class="sheet">
+  <div class="running-head">
+    <div class="left">G2G — The DA&amp;R Special</div>
+    <div class="right">Interview Preparation Guide</div>
+  </div>
+
+  <h1 class="section-title">1. Key Situations Covered by DA&amp;R</h1>
+
+  <p class="lead">DA&amp;R teams advise companies on a continuum of situations, ranging from purely opportunistic balance-sheet optimisation through to formal in-court restructuring. The five situation types below cover roughly 90% of DA&amp;R mandates. Knowing which situation a company is in determines which tools, advisors, and counterparties become relevant.</p>
+
+  <h2 class="subsection">1.1 The Five Core Situations</h2>
+
+  <div class="situation-grid">
+    <div class="situation">
+      <h4>Financial Stress</h4>
+      <p>Leverage is elevated relative to peers, EBITDA is under pressure, and headroom on maintenance covenants is shrinking. The company is still current on its obligations but the trajectory is unfavourable. Boards engage DA&amp;R early to model covenant breach probability, identify deleveraging levers, and pre-empt rating action.</p>
+      <div class="tag-row">
+        <span class="tag">High leverage</span>
+        <span class="tag">Weak earnings</span>
+        <span class="tag">Covenant pressure</span>
+      </div>
+    </div>
+
+    <div class="situation">
+      <h4>Refinancing</h4>
+      <p>The company is fundamentally healthy but has a maturity wall, sub-optimal pricing, restrictive covenants, or a structure that no longer fits the business. The mandate is opportunistic: improve terms, push out the maturity profile, simplify the capital stack, or unlock additional capacity for growth and shareholder returns.</p>
+      <div class="tag-row">
+        <span class="tag">Improve terms</span>
+        <span class="tag">Extend maturity</span>
+        <span class="tag">Optimise structure</span>
+      </div>
+    </div>
+
+    <div class="situation">
+      <h4>Liquidity</h4>
+      <p>Cash is the immediate constraint. The runway is measured in months, not years. Solutions include drawing the revolver, sourcing a bridge facility from a private credit fund, raising super-priority &ldquo;new money&rdquo; tranches, or — in the most acute cases — debtor-in-possession (DIP) financing inside a Chapter 11 process. Speed and certainty trump price.</p>
+      <div class="tag-row">
+        <span class="tag">Bridge financing</span>
+        <span class="tag">Short-term funding</span>
+        <span class="tag">DIP</span>
+      </div>
+    </div>
+
+    <div class="situation">
+      <h4>Equity Recap / Debt-for-Equity</h4>
+      <p>Enterprise value no longer covers the existing debt stack. Equity is &ldquo;out of the money&rdquo; in a downside case. The solution converts a portion of debt into equity — either consensually through an exchange offer, or non-consensually through a Chapter 11 plan. The fulcrum security (the class where value breaks) typically receives the new equity.</p>
+      <div class="tag-row">
+        <span class="tag">Equity recap</span>
+        <span class="tag">Debt-for-equity swap</span>
+        <span class="tag">Fulcrum security</span>
+      </div>
+    </div>
+
+    <div class="situation" style="grid-column: span 2;">
+      <h4>Acquisition Financing &amp; Debt Capacity</h4>
+      <p>An acquirer needs to know how much debt the combined business can support without triggering rating downgrades, covenant issues, or future refinancing risk. DA&amp;R teams build pro-forma capital structures, stress-test through-the-cycle leverage, and advise on the optimal mix of bank debt, TLBs, secured and unsecured bonds, and mezzanine. This work is often performed alongside the M&amp;A team and is critical for sponsor-led LBOs.</p>
+      <div class="tag-row">
+        <span class="tag">Debt capacity</span>
+        <span class="tag">Pro-forma leverage</span>
+        <span class="tag">LBO structuring</span>
+        <span class="tag">Rating agency dialogue</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="tip">
+    <span class="label">Interview Tip</span>
+    Interviewers frequently ask &ldquo;walk me through what a DA&amp;R team actually does.&rdquo; Frame your answer around these five situations rather than a generic &ldquo;we help companies with their debt.&rdquo; Demonstrating that you understand the situation taxonomy &mdash; and that the same advisor handles everything from opportunistic refinancings to Chapter 11 negotiations &mdash; signals genuine sector knowledge.
+  </div>
+
+  <div class="running-foot"><span class="pg">Page 3</span></div>
+</section>
+
+<!-- =====================================================
+     SECTION 1 (continued) — Situations crosswalk
+     ===================================================== -->
+<section class="sheet">
+  <div class="running-head">
+    <div class="left">G2G — The DA&amp;R Special</div>
+    <div class="right">Interview Preparation Guide</div>
+  </div>
+
+  <h2 class="subsection">1.2 Situation-to-Solution Crosswalk</h2>
+
+  <p>Each situation maps to a recognisable toolkit. Knowing which levers the company can realistically pull &mdash; and in what order &mdash; is the core analytical exercise of any DA&amp;R mandate.</p>
+
+  <table>
+    <tr>
+      <th>Situation</th>
+      <th>Typical Trigger</th>
+      <th>First-Line Solutions</th>
+      <th>If That Fails</th>
+    </tr>
+    <tr>
+      <td><strong>Financial Stress</strong></td>
+      <td>Falling EBITDA, tightening covenant headroom, negative outlook from rating agency</td>
+      <td>Cost-out programme, asset disposals, dividend suspension, covenant reset, opportunistic A&amp;E</td>
+      <td>Move into refinancing or distressed exchange</td>
+    </tr>
+    <tr>
+      <td><strong>Refinancing</strong></td>
+      <td>Approaching maturity (12&ndash;24 months out), market window, repricing opportunity</td>
+      <td>Repricing amendment, full take-out via TLB or bond, A&amp;E with existing lenders</td>
+      <td>Private credit take-out if syndicated market is closed</td>
+    </tr>
+    <tr>
+      <td><strong>Liquidity</strong></td>
+      <td>Cash runway &lt; 6 months, RCF nearly fully drawn, working-capital squeeze</td>
+      <td>RCF draw, asset-based lending, bridge from existing sponsor, sale-leaseback</td>
+      <td>Super-priority &ldquo;new money&rdquo; tranche; DIP financing in Chapter 11</td>
+    </tr>
+    <tr>
+      <td><strong>Equity Recap / D-for-E</strong></td>
+      <td>EV below par debt, unsustainable interest burden, missed payment imminent</td>
+      <td>Out-of-court exchange offer, par-for-par exchange with longer maturity, equitisation of subordinated debt</td>
+      <td>Pre-packaged Chapter 11 or scheme of arrangement to bind hold-outs</td>
+    </tr>
+    <tr>
+      <td><strong>Acquisition Financing</strong></td>
+      <td>Announced or contemplated M&amp;A transaction</td>
+      <td>Committed bridge from underwriters, takeout via TLB and/or HY bonds, equity issuance</td>
+      <td>Sponsor equity cheque increase or deal repricing</td>
+    </tr>
+  </table>
+
+  <h2 class="subsection">1.3 Where DA&amp;R Sits in the Bank</h2>
+
+  <p>DA&amp;R is structured differently across firms. At bulge brackets, DA&amp;R typically sits within Investment Banking and partners closely with Leveraged Finance and DCM. At independent advisory firms (Lazard, Houlihan Lokey, Rothschild, PJT, Evercore, Moelis, Perella Weinberg), DA&amp;R is often the largest and most visible practice, particularly on the creditor-advisory side. Houlihan Lokey is the global league-table leader in distressed-debt advisory by volume.</p>
+
+  <p>The same team may sit on different sides of the table across mandates. On a healthy refinancing, the bank advises the company. In a distressed situation, advisors typically split: the company hires one firm, an ad hoc creditor group hires another. Restructuring practices have strict conflict-management protocols precisely because the same advisor cannot represent both sides.</p>
+
+  <div class="tip">
+    <span class="label">Interview Tip</span>
+    If you are interviewing at an independent advisory firm, expect questions about the company-side vs creditor-side dynamic. Both sides require the same valuation and capital-structure analysis &mdash; the difference is whose interests you are optimising. Articulating this even-handedly demonstrates you understand the commercial reality of the practice.
+  </div>
+
+  <div class="running-foot"><span class="pg">Page 4</span></div>
+</section>
+
+<!-- =====================================================
+     SECTION 2 — RESTRUCTURING BASICS
+     ===================================================== -->
+<section class="sheet">
+  <div class="running-head">
+    <div class="left">G2G — The DA&amp;R Special</div>
+    <div class="right">Interview Preparation Guide</div>
+  </div>
+
+  <h1 class="section-title">2. Restructuring Basics</h1>
+
+  <p class="lead">Restructuring vocabulary is precise. Confusing &ldquo;stressed&rdquo; with &ldquo;distressed&rdquo; or treating &ldquo;bankrupt&rdquo; as a synonym for either will undermine credibility immediately. The terminology reflects increasingly severe stages of credit deterioration, each with its own market signals, available tools, and procedural framework.</p>
+
+  <h2 class="subsection">2.1 Stressed vs Distressed vs Bankrupt</h2>
+
+  <div class="ladder">
+    <div class="rung stressed">
+      <h4>STRESSED</h4>
+      <p>Bonds trade at a discount to par (typically 80&ndash;90 cents) but the company is still current on all obligations. Leverage is elevated; ratings are sub-investment-grade; covenant headroom is shrinking. Refinancing is possible but expensive.</p>
+      <div class="meta">Signal: spread widening, negative outlook</div>
+    </div>
+    <div class="rung distressed">
+      <h4>DISTRESSED</h4>
+      <p>Bonds trade below 80 cents (often well below). The market is pricing material default risk. Triggers include missed payments, covenant breach, going-concern qualification, or a downgrade to CCC. The company is typically negotiating with creditors out of court.</p>
+      <div class="meta">Signal: distressed exchange in dialogue</div>
+    </div>
+    <div class="rung bankrupt">
+      <h4>BANKRUPT</h4>
+      <p>The company has filed for formal protection &mdash; Chapter 11 in the US, administration or scheme of arrangement in the UK, sauvegarde in France, etc. Operations continue under court supervision; a plan of reorganisation will determine new ownership and capital structure.</p>
+      <div class="meta">Signal: court filing, DIP financing in place</div>
+    </div>
+  </div>
+
+  <p>The progression is not always linear. A well-executed liability-management exercise can move a company from distressed back to merely stressed without ever filing. Conversely, a sudden liquidity event (lost contract, fraud discovery, market shock) can take a stressed company to bankrupt within weeks.</p>
+
+  <h2 class="subsection">2.2 Restructuring Triggers</h2>
+
+  <p>The market does not need to wait for a missed coupon to identify a restructuring candidate. The three primary triggers below typically prompt board-level engagement of DA&amp;R advisors.</p>
+
+  <div class="triggers">
+    <div class="trigger">
+      <h4>Missed Payment</h4>
+      <p>A missed interest or principal payment is the most unambiguous trigger. Most indentures provide a 30-day grace period for interest before an Event of Default crystallises. Once EoD is declared, cross-defaults can cascade across the capital structure.</p>
+    </div>
+    <div class="trigger">
+      <h4>Covenant Breach</h4>
+      <p>A breach of a maintenance covenant (typically a leverage or coverage ratio tested quarterly) triggers a default unless waived. Even an anticipated breach &mdash; visible 1&ndash;2 quarters out &mdash; will prompt urgent dialogue with the lender group.</p>
+    </div>
+    <div class="trigger">
+      <h4>Rating Downgrade</h4>
+      <p>A downgrade into CCC territory by S&amp;P, Moody&rsquo;s, or Fitch can trigger forced selling by ratings-constrained funds, push the credit out of major indices, and increase financing costs across the structure. Multi-notch downgrades often precede formal restructuring.</p>
+    </div>
+  </div>
+
+  <p>Other triggers include going-concern qualifications from auditors, the loss of a key customer or contract, a regulatory action, a key-person event, the discovery of fraud or accounting irregularities, and material adverse change (MAC) declarations by lenders. Sponsor-backed companies face an additional trigger: the sponsor signalling unwillingness to inject further equity.</p>
+
+  <div class="running-foot"><span class="pg">Page 5</span></div>
+</section>
+
+<!-- =====================================================
+     SECTION 2 (continued) — TOOLS
+     ===================================================== -->
+<section class="sheet">
+  <div class="running-head">
+    <div class="left">G2G — The DA&amp;R Special</div>
+    <div class="right">Interview Preparation Guide</div>
+  </div>
+
+  <h2 class="subsection">2.3 The Restructuring Toolkit</h2>
+
+  <p>A DA&amp;R advisor&rsquo;s value comes from knowing which tool fits which situation, what creditor consent thresholds apply, and how aggressive the company can realistically be. The four tools below cover the majority of out-of-court restructurings.</p>
+
+  <div class="tools">
+    <div class="tool">
+      <h4>Amend-and-Extend (A&amp;E)</h4>
+      <p>Existing lenders agree to push out maturities &mdash; typically by 1&ndash;3 years &mdash; in exchange for higher pricing, fees, tighter documentation, or additional collateral. Avoids the cost and execution risk of a full refinancing. Requires majority lender consent (typically &gt;50.1% or &gt;66 2/3% depending on the credit agreement).</p>
+    </div>
+    <div class="tool">
+      <h4>Covenant Reset / Waiver</h4>
+      <p>Lenders agree to relax or temporarily suspend maintenance covenants &mdash; typically the leverage covenant &mdash; in exchange for a fee, equity cure rights, or additional reporting requirements. A short-term fix that buys management time to execute an operational turnaround. Often paired with milestones.</p>
+    </div>
+    <div class="tool">
+      <h4>Maturity Extension</h4>
+      <p>A standalone extension of bond or loan maturities, executed via consent solicitation, exchange offer, or scheme of arrangement. Differs from full A&amp;E in that pricing and other economic terms may be substantially preserved. Useful when the only real problem is the maturity profile.</p>
+    </div>
+    <div class="tool">
+      <h4>Debt-for-Equity Swap</h4>
+      <p>The most invasive consensual tool. A class of debt &mdash; typically the fulcrum security &mdash; is exchanged for new equity in the reorganised company, eliminating the debt and the associated interest burden. Existing equity is heavily diluted or wiped out. May be executed out-of-court via exchange offer, or in-court via plan of reorganisation.</p>
+    </div>
+  </div>
+
+  <h2 class="subsection">2.4 Liability Management Exercises (LMEs)</h2>
+
+  <p>The 2020s have seen the rise of so-called &ldquo;coercive&rdquo; liability management exercises, particularly in the US. These transactions exploit ambiguities or loopholes in cov-lite credit agreements to shift value between creditor classes. The two most prominent variants:</p>
+
+  <table>
+    <tr>
+      <th>Technique</th>
+      <th>Mechanic</th>
+      <th>Notable Examples</th>
+    </tr>
+    <tr>
+      <td><strong>Drop-down Financing</strong></td>
+      <td>Valuable assets (often IP) are transferred to an unrestricted subsidiary, which then incurs new debt secured against those assets. The new lenders effectively jump the queue ahead of the existing lenders, who see their collateral pool shrink.</td>
+      <td>J. Crew (2017) was the originating template; Revlon and Envision Healthcare followed.</td>
+    </tr>
+    <tr>
+      <td><strong>Uptier Exchange</strong></td>
+      <td>A majority of an existing lender class agrees with the company to subordinate the minority. The participating majority receives new super-priority debt; the non-participating minority is structurally subordinated. Highly contentious and frequently litigated.</td>
+      <td>Serta Simmons (2020); the Fifth Circuit&rsquo;s 2024 ruling has narrowed but not eliminated the technique.</td>
+    </tr>
+  </table>
+
+  <div class="warn">
+    <span class="label">Caution</span>
+    LMEs sit in a contested area of the market and are increasingly being challenged in court. Most credit agreements written from 2023 onwards include explicit &ldquo;J. Crew&rdquo; and &ldquo;Serta&rdquo; blockers. Expect interviewers at distressed-focused funds and advisors (Houlihan, PJT, Lazard) to ask about these.
+  </div>
+
+  <div class="tip">
+    <span class="label">Interview Tip</span>
+    A common question: &ldquo;What is the difference between a consensual and a non-consensual restructuring?&rdquo; The clean answer: a consensual restructuring achieves the required creditor consent threshold out of court (typically a unanimous or near-unanimous vote for material changes); a non-consensual restructuring uses a court process &mdash; Chapter 11, scheme of arrangement, or restructuring plan &mdash; to bind dissenting minorities to the deal.
+  </div>
+
+  <div class="running-foot"><span class="pg">Page 6</span></div>
+</section>
+
+<!-- =====================================================
+     SECTION 3 — VALUATION IN DA&R
+     ===================================================== -->
+<section class="sheet">
+  <div class="running-head">
+    <div class="left">G2G — The DA&amp;R Special</div>
+    <div class="right">Interview Preparation Guide</div>
+  </div>
+
+  <h1 class="section-title">3. Valuation Approach in DA&amp;R</h1>
+
+  <p class="lead">Valuation in DA&amp;R uses the same three core methodologies as standard M&amp;A &mdash; DCF, trading comparables, and precedent transactions &mdash; but with an inverted analytical objective. Standard valuation asks: <em>what is the company worth?</em> DA&amp;R valuation asks: <em>does the enterprise value support the debt &mdash; and if not, where does value break?</em></p>
+
+  <h2 class="subsection">3.1 The Three Core Methodologies</h2>
+
+  <table>
+    <tr>
+      <th>Methodology</th>
+      <th>Standard Application</th>
+      <th>DA&amp;R Adjustment</th>
+    </tr>
+    <tr>
+      <td><strong>Discounted Cash Flow (DCF)</strong></td>
+      <td>Project FCF over 5&ndash;10 years, discount at WACC, add terminal value.</td>
+      <td>Use management base case, downside case, and stressed case. Higher discount rate to reflect distress risk premium. Sensitivity-test the terminal multiple aggressively.</td>
+    </tr>
+    <tr>
+      <td><strong>Trading Comparables</strong></td>
+      <td>Apply EV/EBITDA, EV/Revenue from listed peers.</td>
+      <td>Lean on the bottom quartile of the comp set, not the median. Distressed companies trade at material discounts even after refinancing. Consider a stressed-multiple overlay.</td>
+    </tr>
+    <tr>
+      <td><strong>Precedent Transactions</strong></td>
+      <td>Apply EV/EBITDA from comparable M&amp;A transactions.</td>
+      <td>Distinguish between healthy-market precedents and distressed-asset sales (often executed via 363 sales in Chapter 11), which transact at a discount to going-concern value.</td>
+    </tr>
+  </table>
+
+  <h2 class="subsection">3.2 The Distinctive DA&amp;R Lenses</h2>
+
+  <h3 class="minor">Downside / Stressed Valuation</h3>
+  <p>The base case is necessary but not sufficient. DA&amp;R analysis builds a downside scenario (typically a recession-style EBITDA decline of 20&ndash;40% sustained over 2&ndash;3 years) and a stressed scenario (a more severe sector-specific shock). The valuation under each scenario determines whether the existing debt is still covered and what level of restructuring would be required if conditions deteriorate.</p>
+
+  <h3 class="minor">Recovery Analysis</h3>
+  <p>Recovery analysis estimates what each class of creditor would receive in a hypothetical liquidation or reorganisation. Cents-on-the-dollar recoveries are calculated by applying the stressed enterprise value through the capital structure waterfall. Secured lenders typically expect 60&ndash;90% recovery; senior unsecured 20&ndash;50%; subordinated 0&ndash;20%; equity 0%. Agency studies (Moody&rsquo;s, S&amp;P) publish historical recovery data by sector and instrument type for benchmarking.</p>
+
+  <h3 class="minor">EV Waterfall</h3>
+  <p>The waterfall illustrates how stressed enterprise value is allocated through the capital structure in priority order. The class where value &ldquo;breaks&rdquo; &mdash; receives less than par &mdash; is the fulcrum security and almost always becomes the new equity in a reorganised company.</p>
+
+  <div class="waterfall">
+    <div class="row"><div class="label">Stressed EV</div><div class="bar"></div><div class="val">$1,000m</div></div>
+    <div class="row"><div class="label">(&minus;) RCF / Super-Priority</div><div class="bar" style="width:8%"></div><div class="val">($100m)</div></div>
+    <div class="row"><div class="label">(&minus;) First-Lien Term Loan</div><div class="bar" style="width:48%"></div><div class="val">($500m)</div></div>
+    <div class="row"><div class="label">(&minus;) Second-Lien Notes &mdash; <em>fulcrum</em></div><div class="bar" style="width:35%; background: linear-gradient(90deg, #B28538, #C9A646);"></div><div class="val">($350m of $400m)</div></div>
+    <div class="row"><div class="label">(&minus;) Unsecured Notes</div><div class="bar" style="width:5%; background:#8E2D2D;"></div><div class="val">($50m of $300m)</div></div>
+    <div class="row"><div class="label">Residual to Equity</div><div class="bar" style="width:0%;"></div><div class="val">$0</div></div>
+  </div>
+
+  <p style="font-size:10pt; color:var(--muted); margin-top:-8px;">Illustrative. The Second-Lien Notes are the fulcrum security &mdash; they recover 87.5 cents on the dollar and would receive the new equity in a debt-for-equity restructuring.</p>
+
+  <div class="running-foot"><span class="pg">Page 7</span></div>
+</section>
+
+<!-- =====================================================
+     SECTION 3 (continued) — Adjustments + Objective
+     ===================================================== -->
+<section class="sheet">
+  <div class="running-head">
+    <div class="left">G2G — The DA&amp;R Special</div>
+    <div class="right">Interview Preparation Guide</div>
+  </div>
+
+  <h2 class="subsection">3.3 Critical Adjustments in DA&amp;R Valuation</h2>
+
+  <p>Distressed companies routinely present financials that overstate the underlying earnings power of the business. Three categories of adjustment are essential.</p>
+
+  <h3 class="minor">Normalised EBITDA</h3>
+  <p>Reported EBITDA is rarely the right starting point. DA&amp;R analysts strip out one-time benefits (gains on disposals, insurance recoveries, COVID-era subsidies, FX windfalls) and add back genuine non-recurring costs (restructuring charges, litigation provisions, impairments). Equally important: <em>add-backs that recur every quarter are not really one-time</em>. Aggressive &ldquo;adjusted EBITDA&rdquo; is a frequent area of disagreement between sponsors and creditor advisors. The normalised number often comes in 10&ndash;25% below the company-marketed figure.</p>
+
+  <h3 class="minor">Conservative Assumptions</h3>
+  <p>Where standard DCF analysis adopts management projections at face value, DA&amp;R analysis applies systematic haircuts: revenue growth flat-to-down for 2 years, margin recovery delayed by 12&ndash;18 months, no benefit from speculative cost initiatives, terminal multiples at the bottom quartile. The objective is to identify the value the business is worth in a realistic downside &mdash; not in management&rsquo;s preferred narrative.</p>
+
+  <h3 class="minor">Working Capital Stress</h3>
+  <p>Distressed companies often reach an acute liquidity point not because EBITDA collapsed but because working capital reversed. Suppliers tighten credit terms or demand cash on delivery; customers delay payment; insurance and surety providers require collateral. A working-capital stress test models a 20&ndash;30 day deterioration in net working capital days and overlays the resulting liquidity drain on the cash flow forecast. This often reveals that the company will run out of cash months before EBITDA stabilises.</p>
+
+  <h2 class="subsection">3.4 The Core Objective</h2>
+
+  <p>Every DA&amp;R valuation exercise ultimately answers a single question:</p>
+
+  <div class="formula">
+    Does the enterprise value of the business support the debt &mdash; today, in the base case, and in a realistic downside?
+  </div>
+
+  <p>If the answer is yes across all scenarios, the situation is opportunistic and the conversation is about pricing and terms. If the answer is yes in the base case but no in the downside, the situation is stressed and the conversation is about resilience: covenant headroom, liquidity buffers, refinancing risk. If the answer is no even in the base case, the situation is distressed and the conversation moves immediately to which class of creditors will be impaired and how the residual enterprise value will be reallocated.</p>
+
+  <table>
+    <tr>
+      <th>Scenario</th>
+      <th>EV vs Total Debt</th>
+      <th>Implication</th>
+    </tr>
+    <tr>
+      <td>EV &gt; Debt by &gt;30% in all cases</td>
+      <td>Comfortable coverage</td>
+      <td>Healthy refinancing or opportunistic optimisation</td>
+    </tr>
+    <tr>
+      <td>EV &gt; Debt in base, &lt; Debt in downside</td>
+      <td>Marginal coverage</td>
+      <td>Defensive refinancing, A&amp;E, covenant reset</td>
+    </tr>
+    <tr>
+      <td>EV &lt; Debt in base case</td>
+      <td>Capital structure unsustainable</td>
+      <td>Restructuring required: debt-for-equity, distressed exchange, or formal process</td>
+    </tr>
+  </table>
+
+  <div class="tip">
+    <span class="label">Interview Tip</span>
+    The single highest-leverage answer in a DA&amp;R interview is being able to explain &ldquo;where does value break in this capital structure?&rdquo; The answer requires you to (i) value the business under multiple scenarios, (ii) walk down the capital structure in priority order, and (iii) identify the class that recovers less than par. That class is the fulcrum &mdash; and it will lead the restructuring negotiation.
+  </div>
+
+  <div class="running-foot"><span class="pg">Page 8</span></div>
+</section>
+
+<!-- =====================================================
+     SECTION 4 — KEY CREDIT METRICS
+     ===================================================== -->
+<section class="sheet">
+  <div class="running-head">
+    <div class="left">G2G — The DA&amp;R Special</div>
+    <div class="right">Interview Preparation Guide</div>
+  </div>
+
+  <h1 class="section-title">4. Key Credit Metrics</h1>
+
+  <p class="lead">Credit analysis is built on a relatively small set of ratios, but each has nuances that distinguish a junior analyst from a credible practitioner. The six metrics below are the universal language of DA&amp;R, leveraged finance, private credit, and rating agency analysis. You should know each definition cold and be able to discuss its limitations.</p>
+
+  <table class="metrics">
+    <tr>
+      <th>Metric</th>
+      <th>Definition</th>
+      <th>What It Tells You</th>
+    </tr>
+    <tr>
+      <td><strong>Net Debt / EBITDA</strong></td>
+      <td>Total debt minus cash, divided by LTM EBITDA. The single most-cited leverage metric in credit markets.</td>
+      <td>How many years of EBITDA would be required to repay all debt. IG companies typically &lt;3.0x; sub-IG 3.0&ndash;6.0x; aggressive LBOs 6.0&ndash;8.0x+. Above 7.0x is a meaningful flag for refinancing risk and rating-agency scrutiny.</td>
+    </tr>
+    <tr>
+      <td><strong>Interest Coverage</strong><br>(EBITDA / Interest)</td>
+      <td>EBITDA divided by gross cash interest expense. A measure of how comfortably operating earnings cover the cost of debt.</td>
+      <td>Above 4.0x is comfortable; 2.0&ndash;3.0x is the typical leveraged-credit range; below 1.5x is distressed. Crucially sensitive to floating-rate exposure: a 200bp rate move can cut coverage in half.</td>
+    </tr>
+    <tr>
+      <td><strong>CFADS</strong><br>(Cash Flow Available for Debt Service)</td>
+      <td>EBITDA &minus; cash taxes &minus; maintenance capex &minus; net working capital movement. The cash actually available to service debt before financing flows.</td>
+      <td>The most honest cash flow metric for credit. Strips out the difference between accrual EBITDA and real cash generation. CFADS is the foundation of project finance, infrastructure, and any transaction with hard debt-service requirements.</td>
+    </tr>
+    <tr>
+      <td><strong>DSCR</strong><br>(Debt Service Coverage Ratio)</td>
+      <td>CFADS divided by total debt service (interest + scheduled principal repayments) for the period.</td>
+      <td>Whether the cash flow is enough to meet contractual debt obligations. &gt;1.20x is comfortable in corporate credit; project finance typically requires &gt;1.30&ndash;1.50x; below 1.00x means the company is consuming cash to meet its obligations.</td>
+    </tr>
+    <tr>
+      <td><strong>Liquidity Headroom</strong></td>
+      <td>Cash + undrawn committed facilities (RCF, ABL) available to the company.</td>
+      <td>The runway measure. DA&amp;R teams obsess over liquidity headroom because it is the binding constraint in most distressed situations. A company with 18 months of liquidity has time to restructure consensually; a company with 3 months does not.</td>
+    </tr>
+    <tr>
+      <td><strong>FCCR</strong><br>(Fixed Charge Coverage Ratio)</td>
+      <td>(EBITDA &minus; capex &minus; cash taxes) divided by (cash interest + scheduled principal + lease payments). A broader version of DSCR that captures all fixed-cost obligations.</td>
+      <td>The most comprehensive coverage metric, particularly relevant for asset-heavy and lease-intensive businesses (retail, restaurants, healthcare). Often used as a maintenance covenant in ABL and middle-market credit agreements.</td>
+    </tr>
+  </table>
+
+  <div class="tip">
+    <span class="label">Interview Tip</span>
+    When asked &ldquo;what&rsquo;s the difference between Net Debt/EBITDA and Interest Coverage?&rdquo;, the polished answer notes that leverage is a stock measure (snapshot of capital structure today) and coverage is a flow measure (ongoing ability to service the debt). Both can mislead in isolation: a company with low leverage but no cash flow is still in trouble; a company with high leverage but strong coverage may be perfectly safe through the cycle.
+  </div>
+
+  <div class="running-foot"><span class="pg">Page 9</span></div>
+</section>
+
+<!-- =====================================================
+     SECTION 4 (continued) — Metrics in practice
+     ===================================================== -->
+<section class="sheet">
+  <div class="running-head">
+    <div class="left">G2G — The DA&amp;R Special</div>
+    <div class="right">Interview Preparation Guide</div>
+  </div>
+
+  <h2 class="subsection">4.1 Common Pitfalls in Credit Metrics</h2>
+
+  <p>Credit metrics are simple in form but are routinely manipulated, presented inconsistently, or misinterpreted. The categories below are recurring areas of dispute on live mandates.</p>
+
+  <table>
+    <tr>
+      <th>Pitfall</th>
+      <th>What to Watch For</th>
+    </tr>
+    <tr>
+      <td><strong>Adjusted EBITDA inflation</strong></td>
+      <td>Aggressive add-backs for synergies, run-rate cost savings, and pro-forma acquisitions. Credit agreements often cap synergy add-backs (&ldquo;EBITDA cap&rdquo;) precisely because of historical abuse.</td>
+    </tr>
+    <tr>
+      <td><strong>Net vs Gross Leverage</strong></td>
+      <td>Companies highlight Net Debt/EBITDA when cash balances are high; creditors and rating agencies often prefer Gross. The gap can be &gt;1.0x for cash-rich businesses and is material in credit dialogue.</td>
+    </tr>
+    <tr>
+      <td><strong>Interest vs Cash Interest</strong></td>
+      <td>P&amp;L interest may include PIK accruals that don&rsquo;t consume cash. Cash interest coverage is what matters for liquidity; total interest coverage is what matters for sustainability.</td>
+    </tr>
+    <tr>
+      <td><strong>Maintenance vs Total Capex</strong></td>
+      <td>CFADS uses maintenance capex; aggressive presentations often understate maintenance capex to flatter coverage ratios. A useful sanity check: maintenance capex should at least equal depreciation over time.</td>
+    </tr>
+    <tr>
+      <td><strong>Off-Balance-Sheet Obligations</strong></td>
+      <td>Operating leases (now on balance sheet under IFRS 16 / ASC 842), pension deficits, factoring lines, and supply-chain finance can materially understate true leverage if excluded.</td>
+    </tr>
+    <tr>
+      <td><strong>Floating-Rate Exposure</strong></td>
+      <td>Coverage ratios calculated on historical interest can mask the real burden once rates reset. Always stress-test interest coverage at +200&ndash;300bps for floating-rate borrowers.</td>
+    </tr>
+  </table>
+
+  <h2 class="subsection">4.2 Putting the Metrics Together</h2>
+
+  <p>No single metric tells the full story. A useful framework: leverage tells you the size of the problem, coverage tells you whether the company can keep paying, CFADS and DSCR translate accounting into cash, and liquidity headroom tells you how much time the company has. A high-leverage business with strong coverage and 18 months of liquidity is a refinancing exercise; the same leverage with weak coverage and 3 months of liquidity is a restructuring.</p>
+
+  <table>
+    <tr>
+      <th>Profile</th>
+      <th>Leverage</th>
+      <th>Interest Cov.</th>
+      <th>Liquidity</th>
+      <th>Likely Mandate</th>
+    </tr>
+    <tr>
+      <td>Investment Grade Corporate</td>
+      <td>&lt;3.0x</td>
+      <td>&gt;6.0x</td>
+      <td>Multi-year</td>
+      <td>Opportunistic refinancing</td>
+    </tr>
+    <tr>
+      <td>Healthy Leveraged Credit</td>
+      <td>3.0&ndash;5.0x</td>
+      <td>3.0&ndash;5.0x</td>
+      <td>12&ndash;24 months</td>
+      <td>Repricing, A&amp;E, repeat issuer</td>
+    </tr>
+    <tr>
+      <td>Aggressive LBO</td>
+      <td>6.0&ndash;8.0x</td>
+      <td>1.8&ndash;2.5x</td>
+      <td>12&ndash;18 months</td>
+      <td>Capital structure monitoring; covenant headroom focus</td>
+    </tr>
+    <tr>
+      <td>Stressed</td>
+      <td>&gt;7.0x</td>
+      <td>1.5&ndash;2.0x</td>
+      <td>6&ndash;12 months</td>
+      <td>Defensive refinancing, A&amp;E, covenant reset</td>
+    </tr>
+    <tr>
+      <td>Distressed</td>
+      <td>&gt;8.0x or unsustainable</td>
+      <td>&lt;1.5x</td>
+      <td>&lt;6 months</td>
+      <td>Restructuring; debt-for-equity; potential filing</td>
+    </tr>
+  </table>
+
+  <div class="tip">
+    <span class="label">Interview Tip</span>
+    A classic credit case study: &ldquo;Company X has Net Debt/EBITDA of 9.0x. Is it distressed?&rdquo; The right answer is &ldquo;it depends.&rdquo; A 9.0x telecom infrastructure business with 30-year contracts and 5.0x interest coverage is not distressed. A 9.0x cyclical retailer with 1.2x coverage and 4 months of liquidity is. Always ask what the cash flow looks like and what the maturity profile is before drawing a conclusion from a leverage number.
+  </div>
+
+  <div class="running-foot"><span class="pg">Page 10</span></div>
+</section>
+
+<!-- =====================================================
+     SECTION 5 — FINANCING OPTIONS
+     ===================================================== -->
+<section class="sheet">
+  <div class="running-head">
+    <div class="left">G2G — The DA&amp;R Special</div>
+    <div class="right">Interview Preparation Guide</div>
+  </div>
+
+  <h1 class="section-title">5. Financing Options</h1>
+
+  <p class="lead">DA&amp;R advisors operate across the full debt capital markets spectrum. Choosing the right instrument requires balancing speed of execution, cost, flexibility, market access, and the company&rsquo;s credit profile. The four channels below dominate the corporate financing landscape.</p>
+
+  <h2 class="subsection">5.1 Comparison of Financing Channels</h2>
+
+  <table>
+    <tr>
+      <th>Channel</th>
+      <th>Typical Size</th>
+      <th>Speed</th>
+      <th>Cost</th>
+      <th>Best Suited For</th>
+    </tr>
+    <tr>
+      <td><strong>Private Credit</strong></td>
+      <td>$50m &ndash; $5bn+</td>
+      <td>Fastest (4&ndash;8 weeks)</td>
+      <td>Highest (S+500&ndash;700bps)</td>
+      <td>Speed-critical, complex credits, mid-market sponsor LBOs, syndicated market disruption</td>
+    </tr>
+    <tr>
+      <td><strong>Syndicated Loan / TLB</strong></td>
+      <td>$300m &ndash; $5bn</td>
+      <td>Medium (8&ndash;12 weeks)</td>
+      <td>Mid (S+275&ndash;450bps)</td>
+      <td>Sponsor LBOs, repricing transactions, large refinancings, credits with broad institutional appetite</td>
+    </tr>
+    <tr>
+      <td><strong>Bonds (HY / IG)</strong></td>
+      <td>$300m &ndash; multi-bn</td>
+      <td>Medium (10&ndash;14 weeks)</td>
+      <td>Variable (rate + spread)</td>
+      <td>Large issuers, long-tenor needs (7&ndash;10 years), fixed-rate funding, public-market profile</td>
+    </tr>
+    <tr>
+      <td><strong>Amend-and-Extend</strong></td>
+      <td>Existing facility size</td>
+      <td>Fastest (3&ndash;6 weeks)</td>
+      <td>Marginal (extension fee)</td>
+      <td>Existing relationships, supportive lender groups, situations where market access is constrained</td>
+    </tr>
+  </table>
+
+  <h2 class="subsection">5.2 Channel Deep-Dives</h2>
+
+  <h3 class="minor">Private Credit</h3>
+  <p>Direct lending funds &mdash; Ares, Blackstone, Apollo, HPS, Antares, Owl Rock, Sixth Street, and dozens of others &mdash; have grown from a niche middle-market product to a $1.5tn+ asset class that now competes head-to-head with the syndicated loan market for large sponsor-backed deals. The advantages are speed, certainty of execution, customisation (delayed-draw tranches, PIK toggles, covenant flexibility), and confidentiality. The cost is higher all-in pricing, sometimes by 100&ndash;200bps versus broadly syndicated loans. In stressed and distressed situations, private credit is increasingly the only available source of capital because direct lenders can underwrite credits that the syndicated market will not absorb.</p>
+
+  <h3 class="minor">Syndicated Loan / Term Loan B (TLB)</h3>
+  <p>The TLB market is the institutional workhorse of leveraged finance. Loans are arranged by an investment bank and sold to a syndicate of CLO managers, loan funds, BDCs, and other institutional investors. TLBs typically feature floating rates (SOFR + spread), 7-year tenors, light covenant packages (cov-lite is now market standard), and bullet maturities. The market is deep when conditions are constructive but can close abruptly during periods of risk-off sentiment, leaving issuers reliant on private credit or bridge facilities.</p>
+
+  <h3 class="minor">Bonds</h3>
+  <p>Public bond markets serve large issuers seeking long-tenor (7&ndash;10 year), fixed-rate funding. The investment-grade bond market is highly liquid and accessible to most large corporates. The high-yield bond market caters to sub-investment-grade issuers and is more volatile, with windows opening and closing based on credit spreads, fund flows, and broader equity-market sentiment. Bonds bring public disclosure obligations, ratings requirements, and a different covenant package (incurrence-based rather than maintenance-based for HY) that gives issuers more operational flexibility but offers creditors fewer protections.</p>
+
+  <h3 class="minor">Amend-and-Extend</h3>
+  <p>A&amp;E avoids the cost, execution risk, and disclosure burden of a full refinancing by negotiating directly with existing lenders. Pricing is typically increased modestly, an extension fee is paid (often 25&ndash;100bps), and maturities are pushed out by 1&ndash;3 years. The trade-off: A&amp;E requires majority lender consent and depends on a supportive lender group. In situations where lenders are fatigued, oversubscribed to the credit, or have already taken markdowns, an A&amp;E may not be achievable on commercially reasonable terms.</p>
+
+  <div class="running-foot"><span class="pg">Page 11</span></div>
+</section>
+
+<!-- =====================================================
+     SECTION 5 (continued) — Selection logic
+     ===================================================== -->
+<section class="sheet">
+  <div class="running-head">
+    <div class="left">G2G — The DA&amp;R Special</div>
+    <div class="right">Interview Preparation Guide</div>
+  </div>
+
+  <h2 class="subsection">5.3 How DA&amp;R Teams Choose</h2>
+
+  <p>The financing decision is rarely binary. A typical DA&amp;R recommendation ranks the channels by feasibility, models the all-in cost of each, and presents a primary recommendation alongside a fallback option. The factors that drive the recommendation:</p>
+
+  <table>
+    <tr>
+      <th>Factor</th>
+      <th>Implication</th>
+    </tr>
+    <tr>
+      <td><strong>Credit Quality</strong></td>
+      <td>IG companies access bonds cheaply; sub-IG companies are confined to TLB or HY; CCC and stressed credits are typically locked out of public markets and reliant on private credit or A&amp;E.</td>
+    </tr>
+    <tr>
+      <td><strong>Speed Required</strong></td>
+      <td>Acquisition financing with a hard signing date typically requires a committed bridge from underwriters, taken out post-closing through TLB, bonds, or private credit. Liquidity-driven situations require private credit or RCF draws.</td>
+    </tr>
+    <tr>
+      <td><strong>Size of Raise</strong></td>
+      <td>Below $300m, syndicated and bond markets are inefficient; private credit dominates. Above $1bn, the syndicated and bond markets offer better economics. Private credit has moved up-market and now competes for $3bn+ unitranche transactions.</td>
+    </tr>
+    <tr>
+      <td><strong>Tenor</strong></td>
+      <td>Bank facilities typically 3&ndash;5 years; TLBs 7 years; bonds 7&ndash;10 years (or longer); private credit 5&ndash;7 years. The optimal tenor depends on the company&rsquo;s asset life and refinancing risk tolerance.</td>
+    </tr>
+    <tr>
+      <td><strong>Flexibility Needs</strong></td>
+      <td>Covenant-heavy bank deals constrain operational decisions; cov-lite TLBs and incurrence-covenant bonds offer more flexibility but cost more. Private credit can be tailored entirely to the borrower&rsquo;s needs.</td>
+    </tr>
+    <tr>
+      <td><strong>Market Conditions</strong></td>
+      <td>Open vs closed market windows can dictate channel choice. In tight markets, A&amp;E or private credit may be the only realistic options. In open markets, issuers should access the cheapest available source.</td>
+    </tr>
+  </table>
+
+  <h2 class="subsection">5.4 The Capital Structure Stack</h2>
+
+  <p>Most large leveraged credits use a layered capital structure that combines several of the channels above. A typical sponsor-backed LBO might include:</p>
+
+  <ul class="tight">
+    <li><strong>Revolving Credit Facility (RCF)</strong> &mdash; provided by relationship banks; used for working capital and liquidity backstop. Typically undrawn at signing.</li>
+    <li><strong>First-Lien Term Loan B (TLB)</strong> &mdash; institutional syndicated loan, secured on substantially all assets, typically 4&ndash;5x leverage.</li>
+    <li><strong>Second-Lien Loan or Senior Notes</strong> &mdash; structurally subordinated, higher pricing, taking total leverage to 5.5&ndash;7.0x.</li>
+    <li><strong>Subordinated / Mezzanine / PIK Notes</strong> &mdash; the most expensive layer, typically held by private credit funds, taking aggregate leverage to 7.0&ndash;8.5x.</li>
+    <li><strong>Sponsor Equity</strong> &mdash; the first-loss capital, sized to deliver the sponsor&rsquo;s target IRR.</li>
+  </ul>
+
+  <p>In restructuring scenarios, the order of repayment in a downside is the inverse of the order of return in an upside. Equity is wiped out first; subordinated debt next; senior unsecured next; secured lenders last. The fulcrum security &mdash; the class that recovers less than par &mdash; emerges from the analysis as the natural counterparty for any debt-for-equity solution.</p>
+
+  <div class="tip">
+    <span class="label">Interview Tip</span>
+    A common technical question: &ldquo;Why would a company issue both a TLB and high-yield bonds rather than one or the other?&rdquo; The answer combines tenor (bonds give longer maturity), rate exposure (bonds are typically fixed, TLBs floating), investor base (different pools of capital with different appetites), prepayability (TLBs are typically prepayable at par, bonds carry call premiums), and covenant package. A balanced structure draws from multiple pools to optimise cost, flexibility, and refinancing risk.
+  </div>
+
+  <div class="running-foot"><span class="pg">Page 12</span></div>
+</section>
+
+<!-- =====================================================
+     SECTION 6 — MARKET DRIVERS & RISKS
+     ===================================================== -->
+<section class="sheet">
+  <div class="running-head">
+    <div class="left">G2G — The DA&amp;R Special</div>
+    <div class="right">Interview Preparation Guide</div>
+  </div>
+
+  <h1 class="section-title">6. Market Drivers &amp; Risks</h1>
+
+  <p class="lead">DA&amp;R activity is highly cyclical. Refinancing volume tracks the maturity wall and prevailing credit spreads; restructuring activity tracks default rates, which themselves track economic stress, rates, and sector-specific dynamics. A strong DA&amp;R interview candidate can articulate the macro and structural forces driving the current pipeline.</p>
+
+  <h2 class="subsection">6.1 Macro Drivers</h2>
+
+  <table>
+    <tr>
+      <th>Driver</th>
+      <th>Mechanism</th>
+      <th>Implication for DA&amp;R</th>
+    </tr>
+    <tr>
+      <td><strong>Interest Rate Environment</strong></td>
+      <td>Higher rates increase debt service costs, particularly for floating-rate borrowers. Each 100bps move materially compresses interest coverage for leveraged credits.</td>
+      <td>Drives covenant pressure, refinancing-into-higher-cost transactions, and stressed-credit volume.</td>
+    </tr>
+    <tr>
+      <td><strong>Credit Spreads</strong></td>
+      <td>Spread widening signals deteriorating credit conditions and reduces issuance windows. Tight spreads create refinancing opportunities for marginal credits.</td>
+      <td>Tight spreads &rarr; refinancing volume; wide spreads &rarr; restructuring volume.</td>
+    </tr>
+    <tr>
+      <td><strong>Default Rates</strong></td>
+      <td>Trailing 12-month leveraged loan and HY default rates &mdash; tracked by Moody&rsquo;s, S&amp;P, and Fitch &mdash; signal credit cycle phase.</td>
+      <td>Default rate above 4&ndash;5% historically signals an active restructuring cycle; below 2% signals benign conditions.</td>
+    </tr>
+    <tr>
+      <td><strong>Maturity Walls</strong></td>
+      <td>Concentrations of debt maturing in specific years (the &ldquo;wall&rdquo;) drive refinancing volume in advance. The 2025&ndash;2027 maturity wall in leveraged finance is one of the largest on record.</td>
+      <td>Predictable, multi-year refinancing pipeline. Companies typically refinance 12&ndash;24 months before maturity.</td>
+    </tr>
+    <tr>
+      <td><strong>Economic Cycle</strong></td>
+      <td>EBITDA contractions during recessions push leverage ratios up and trigger covenant breaches across the credit market simultaneously.</td>
+      <td>Recession periods are the highest-volume restructuring environments. 2008&ndash;09 and 2020 were generational opportunities.</td>
+    </tr>
+  </table>
+
+  <h2 class="subsection">6.2 Structural Drivers</h2>
+
+  <table>
+    <tr>
+      <th>Driver</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><strong>Rise of Private Credit</strong></td>
+      <td>The private credit AUM has roughly tripled over the past decade, fundamentally reshaping the financing landscape. Direct lenders now provide an alternative for borrowers locked out of public markets and have reduced the cyclicality of credit availability.</td>
+    </tr>
+    <tr>
+      <td><strong>Cov-Lite as Market Standard</strong></td>
+      <td>The vast majority of new institutional loans are now cov-lite, with no maintenance financial covenants. This delays the trigger for restructuring discussions and gives borrowers more operational latitude &mdash; but often results in deeper distress when the eventual reckoning comes.</td>
+    </tr>
+    <tr>
+      <td><strong>Liability Management Exercises</strong></td>
+      <td>The proliferation of coercive LMEs (uptiering, drop-down financings) has created a more adversarial creditor-on-creditor dynamic. Cooperation agreements among lender groups are increasingly common as a defensive measure.</td>
+    </tr>
+    <tr>
+      <td><strong>ESG and Stranded Assets</strong></td>
+      <td>Sectors facing structural decline (thermal coal, oil services, certain real estate categories) generate elevated DA&amp;R activity as access to traditional financing narrows.</td>
+    </tr>
+    <tr>
+      <td><strong>Sponsor Behaviour</strong></td>
+      <td>Private equity sponsors hold portfolio companies longer in difficult exit environments, leading to more A&amp;E activity, dividend recaps, and increasingly, sponsor-led restructurings of their own portfolio companies.</td>
+    </tr>
+  </table>
+
+  <div class="running-foot"><span class="pg">Page 13</span></div>
+</section>
+
+<!-- =====================================================
+     SECTION 6 (continued) — Risks + Sectors
+     ===================================================== -->
+<section class="sheet">
+  <div class="running-head">
+    <div class="left">G2G — The DA&amp;R Special</div>
+    <div class="right">Interview Preparation Guide</div>
+  </div>
+
+  <h2 class="subsection">6.3 Key Risks for DA&amp;R Practitioners</h2>
+
+  <table>
+    <tr>
+      <th>Risk</th>
+      <th>What It Means</th>
+    </tr>
+    <tr>
+      <td><strong>Execution Risk</strong></td>
+      <td>The risk that a contemplated transaction fails to close &mdash; market window shuts, lender support evaporates, or hold-out creditors block consent. DA&amp;R advisors are paid for outcomes, not effort.</td>
+    </tr>
+    <tr>
+      <td><strong>Refinancing Risk</strong></td>
+      <td>The risk that a maturity cannot be refinanced on commercially reasonable terms when it falls due. The most acute risk for leveraged credits in tight market conditions.</td>
+    </tr>
+    <tr>
+      <td><strong>Covenant Risk</strong></td>
+      <td>The risk of an inadvertent or anticipated breach triggering an Event of Default and cross-defaults across the structure. Particularly material in covenant-heavy credit agreements.</td>
+    </tr>
+    <tr>
+      <td><strong>Litigation Risk</strong></td>
+      <td>Aggressive LMEs frequently end in court. The Serta, Mitel, and Robertshaw cases have reshaped the boundaries of permissible creditor-on-creditor activity. Advisors must navigate around evolving case law.</td>
+    </tr>
+    <tr>
+      <td><strong>Reputational Risk</strong></td>
+      <td>Restructurings are zero-sum: someone takes a loss. Advisors who push clients into transactions that subsequently prove value-destructive face reputational consequences with the broader creditor universe.</td>
+    </tr>
+    <tr>
+      <td><strong>Conflict Risk</strong></td>
+      <td>Banks with broad lending and underwriting relationships face conflicts on both company-side and creditor-side mandates. Independent advisors win share precisely because they have fewer conflicts.</td>
+    </tr>
+  </table>
+
+  <h2 class="subsection">6.4 Sectors Currently in Focus</h2>
+
+  <p>Restructuring volume is rarely evenly distributed across sectors. The current cycle has elevated activity in several specific verticals, each driven by sector-specific dynamics layered onto the macro environment.</p>
+
+  <ul class="tight">
+    <li><strong>Commercial Real Estate</strong> &mdash; office in particular, pressured by post-pandemic occupancy declines, higher cap rates, and a wall of maturing debt against valuations that have reset materially lower.</li>
+    <li><strong>Healthcare Services</strong> &mdash; reimbursement pressure, labour-cost inflation, and aggressive sponsor-era leverage have produced a steady pipeline of restructurings (Envision, GenesisCare, Steward).</li>
+    <li><strong>Consumer Discretionary &amp; Retail</strong> &mdash; structural shifts toward e-commerce, plus cyclical pressure on lower-income consumers, continue to generate distress in mall-based and category-specialist retail.</li>
+    <li><strong>Telecom &amp; Media</strong> &mdash; cord-cutting, capex burdens for fibre and 5G, and high leverage from past consolidation deals (Altice, Lumen) keep the sector active.</li>
+    <li><strong>Chemicals &amp; Industrials</strong> &mdash; cyclical EBITDA pressure plus elevated input costs have stressed mid-market sponsor-backed credits.</li>
+  </ul>
+
+  <h2 class="subsection">6.5 Bringing It All Together</h2>
+
+  <p>A complete DA&amp;R perspective integrates the situation diagnosis (Section 1), the restructuring vocabulary and toolkit (Section 2), the valuation framework with its downside lens (Section 3), the credit metrics that quantify risk (Section 4), the financing channels that solve the problem (Section 5), and the macro and structural backdrop that determines what is achievable in the current market (Section 6). Strong candidates can move fluidly between these layers and answer not just &ldquo;what is the company&rsquo;s situation?&rdquo; but &ldquo;what would you advise, and why is now the right time to do it?&rdquo;</p>
+
+  <div class="tip">
+    <span class="label">Interview Tip</span>
+    A frequent closing question: &ldquo;Why DA&amp;R, specifically?&rdquo; The strongest answers connect intellectual interest (the analytical breadth, the negotiation dynamics, the situational variety) with commercial awareness (the counter-cyclicality of the practice, the strategic importance to clients, the seniority of the conversations). Avoid generic answers about &ldquo;wanting to help companies in difficult situations&rdquo; &mdash; demonstrate that you understand what the work actually entails.
+  </div>
+
+  <p class="footer-note">
+    Adapted from G2G Vol. 14 &mdash; Advanced TMT II, with reference to standard market practice in leveraged finance and restructuring. Pricing ranges, leverage benchmarks, and sector observations reflect prevailing market conditions and are intended as directional anchors for interview preparation, not as live market quotes. Prepared for Benjamin Kuan.
+  </p>
+
+  <div class="running-foot"><span class="pg">Page 14</span></div>
+</section>
+
+</body>
+</html>
